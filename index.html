@@ -62,9 +62,9 @@
         <div class="text-center text-white">
             <h1 class="text-2xl md:text-4xl font-bold mb-4">A life story of BSICT 1-1</h1>
             <p class="text-md md:text-xl mb-6">a place to remember where chocolate melt than throwing rocks</p>
-            <button class="text-[12px] md:text-sm  cursor-pointer bg-black hover:bg-white/20 hover:text-black text-white-900 font-bold py-2 px-6 transition duration-300">
-                The Nelson
-            </button>
+            <button class="w-32 text-[12px] md:text-sm cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300 border border-black self-start">
+                                The Nelson
+                            </button>
         </div>
     </div>
     <main class="container max-w-[900px] mx-auto p-4">
@@ -74,47 +74,66 @@
             <div><img src="https://dummyimage.com/600x400/000/fff&text=image" class="w-full h-auto"></div>
             <div class="col-span-2 md:col-span-1"><img src="https://dummyimage.com/600x400/000/fff&text=image" class="w-full h-auto"></div>
         </div>
-        <div class="grid mt-11">
+        <div class="
+  grid grid-cols-1 md:
+  md:grid-cols-[550px_minmax(250px,1fr)] gap-9 mt-11">
             <!-- MAIN -->
             <div>
                 <div class="grid gap-2 md:w-xl">
                     <img src="https://dummyimage.com/600x400/000/fff&text=image" alt="feature image">
-                    <h3>The first year</h3>
-                    <p>July 13, 2013</p>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel aut illum sunt, inventore itaque enim fugit dignissimos laudantium! Voluptatibus laboriosam vel omnis reiciendis natus quam, magnam eum id quidem sapiente.</p>
-                    <button class="w-32 text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300">
-                        Read More
-                    </button>
+                        <div class="flex gap-1 flex-col">
+                            <h3>The first year</h3>
+                            <p>July 13, 2013</p>
+                            <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel aut illum sunt, inventore itaque enim fugit dignissimos laudantium! Voluptatibus laboriosam vel omnis reiciendis natus quam, magnam eum id quidem sapiente.</p>
+                            <button class="w-32 text-[12px] md:text-sm cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300 border border-black self-start">Read More</button>
+                        </div>
                 </div>
-                <div class="grid mt-11 gap-6 md:w-xl">
-                    <div class="grid grid-cols-2  gap-4">
-                        <img src="https://dummyimage.com/600x400/000/fff&text=image" alt="">
-                        <div>
-                            <h2>Gary vs Dandrib</h2>
-                            <p>August 23, 2014</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut deleniti corrupti expedita praesentium, ipsa vitae sequi aut facere pariatur et nulla iusto asperiores a quo modi fuga quas nisi consequatur.</p>
+                <div class="grid gap-5 mt-11 bg-white custom-shadow overflow-hidden md:w-xl">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Image Column - Adjusted to take less space -->
+                        <div class="md:col-span-1 flex justify-center">
+                            <img class="w-full max-w-xs md:max-w-full  object-cover" 
+                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                alt="Wheelband Match">
+                        </div>
+                        
+                        <!-- Text Column - Expanded to take more space -->
+                        <div class="md:col-span-2 flex flex-col justify-center">
+                            <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Gary vs Dandrib</h2>
+                            <p class="text-gray-600 mb-4">August 23, 2014</p>
+                            <p class="text-gray-700 mb-6">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut deleniti corrupti expedita praesentium, ipsa vitae sequi aut facere pariatur et nulla iusto asperiores a quo modi fuga quas nisi consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut deleniti corrupti expedita praesentium.
+                            </p>
+                            <button class="w-32 text-[12px] md:text-sm cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300 border border-black self-start">
+                                Read More
+                            </button>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-1 flex justify-center">
+                            <img class="w-full max-w-xs md:max-w-full  object-cover" 
+                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                alt="Wheelband Match">
+                        </div>
+                        <div class="md:col-span-2 flex flex-col justify-center">
+                            <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Nelson vs Gad</h2>
+                            <p class="text-gray-600 mb-4">April 21, 2015</p>
+                            <p class="text-gray-700 mb-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi veniam voluptatum commodi nesciunt nisi eveniet iure, deleniti ipsam doloribus assumenda dolore debitis sequi neque mollitia? Harum similique explicabo ipsa dolorum.</p>
                             <button class="w-32 text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300">
                                 Read More
                             </button>
                         </div>
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="https://dummyimage.com/600x400/000/fff&text=image" alt="">
-                        <div>
-                            <h2>Nelson vs Gad</h2>
-                            <p>April 21, 2015</p>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi veniam voluptatum commodi nesciunt nisi eveniet iure, deleniti ipsam doloribus assumenda dolore debitis sequi neque mollitia? Harum similique explicabo ipsa dolorum.</p>
-                            <button class="w-32 text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300">
-                                Read More
-                            </button>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="md:col-span-1 flex justify-center">
+                            <img class="w-full max-w-xs md:max-w-full  object-cover" 
+                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                alt="Wheelband Match">
                         </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="https://dummyimage.com/600x400/000/fff&text=image" alt="">
-                        <div>
-                            <h2>Kuya mikel and Gurls</h2>
-                            <p>December 12, 2014</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores facilis obcaecati dignissimos aperiam provident cum numquam repellat quis necessitatibus fugit! Aliquam dicta fugit atque hic aspernatur voluptatem, aperiam laboriosam libero?</p>
+                        <div class="md:col-span-2 flex flex-col justify-center">
+                            <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Kuya mikel and Gurls</h2>
+                            <p class="text-gray-600 mb-4">December 12, 2014</p>
+                            <p class="text-gray-700 mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores facilis obcaecati dignissimos aperiam provident cum numquam repellat quis necessitatibus fugit! Aliquam dicta fugit atque hic aspernatur voluptatem, aperiam laboriosam libero?</p>
                             <button class="w-32 text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300">
                                 Read More
                             </button>
@@ -123,10 +142,232 @@
                 </div>
             </div>
             <!-- ASIDE -->
-            <div>
+            <div class="">
+                <div>
+                    <h1 class="text-xl md:text-2xl border-b border-gray-300">Latest Post</h1>
+                    <div class="grid grid-cols-1 gap-5 p-5">
+                        <div class="grid grid-cols-2 gap-5">
+                            <div><img class="w-full max-w-xs md:max-w-full  object-cover" 
+                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                alt="Wheelband Match"></div>
+                            <div>
+                                <h2 class="text-md md:text-xl  text-gray-600 mb-2">Mang Himang Room Scandal</h2>
+                                 <p class="text-gray-600 mb-4">April 21, 2015</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-5">
+                            <div><img class="w-full max-w-xs md:max-w-full  object-cover" 
+                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                alt="Wheelband Match"></div>
+                            <div>
+                                <h2 class="text-md md:text-xl  text-gray-600 mb-2">Missing Calvin</h2>
+                                 <p class="text-gray-600 mb-4">April 21, 2015</p>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-5">
+                            <div><img class="w-full max-w-xs md:max-w-full  object-cover" 
+                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                alt="Wheelband Match"></div>
+                            <div>
+                                <h2 class="text-md md:text-xl  text-gray-600 mb-2">Ate. Lezil</h2>
+                                 <p class="text-gray-600 mb-4">April 21, 2015</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div x-data="{isAccordion:null}">
+                    <div class="mt-11">
+                        <h1 class="text-md md:text-xl border-b border-gray-300">Room Confession</h1>
+                        <div class="p-5">
+                            <div  @click="isAccordion = isAccordion === 1 ? null : 1" class="flex justify-between cursor-pointer hover:border">
+                                <h2 
+                                class="text-sm md:text-xl text-gray-600  hover:text-gray-800 transition-colors p-1">
+                                Room Scandal
+                            </h2><img class="w-5" src="./src/images/icon/icons8-arrow-down-50.png" alt=""></div>
+                            
 
+                            <div x-show="isAccordion === 1" 
+                                x-transition:enter="transition ease-out duration-300"
+                                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                x-transition:enter-end="opacity-100 transform translate-y-0"
+                                x-transition:leave="transition ease-in duration-200"
+                                x-transition:leave-start="opacity-100 transform translate-y-0"
+                                x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                x-cloak 
+                                class="bg-white shadow-lg p-2">
+                                binatota ni div ang isang babae sa room ni mang kanor
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="p-5">
+                            <div  @click="isAccordion = isAccordion === 2 ? null : 2" class="flex justify-between cursor-pointer hover:border">
+                                <h2 
+                                class="text-sm md:text-xl text-gray-600  hover:text-gray-800 transition-colors p-1">
+                                Piatos
+                            </h2><img class="w-5" src="./src/images/icon/icons8-arrow-down-50.png" alt=""></div>
+                            
+
+                            <div x-show="isAccordion === 2" 
+                                x-transition:enter="transition ease-out duration-300"
+                                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                x-transition:enter-end="opacity-100 transform translate-y-0"
+                                x-transition:leave="transition ease-in duration-200"
+                                x-transition:leave-start="opacity-100 transform translate-y-0"
+                                x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                x-cloak 
+                                class="bg-white shadow-lg p-2">
+                                ge tagaan og piatos c marnhel
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="p-5">
+                            <div  @click="isAccordion = isAccordion === 3 ? null : 3" class="flex justify-between cursor-pointer hover:border hover:transition-all duration-300">
+                                <h2 
+                                class="text-sm md:text-xl text-gray-600  hover:text-gray-800 transition-colors p-1">
+                                Negro namong kuya
+                            </h2><img class="w-5" src="./src/images/icon/icons8-arrow-down-50.png" alt=""></div>
+                            
+
+                            <div x-show="isAccordion === 3" 
+                                x-transition:enter="transition ease-out duration-300"
+                                x-transition:enter-start="opacity-0 transform -translate-y-2"
+                                x-transition:enter-end="opacity-100 transform translate-y-0"
+                                x-transition:leave="transition ease-in duration-200"
+                                x-transition:leave-start="opacity-100 transform translate-y-0"
+                                x-transition:leave-end="opacity-0 transform -translate-y-2"
+                                x-cloak 
+                                class="bg-white shadow-lg p-2">
+                                friendship is over
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-11">
+                    <h1 class="text-md md:text-xl border-b border-gray-300">Follow</h1>
+                    <div class="flex gap-1 flex-wrap p-5 justify-evenly md:p-5">
+                        <img class="w-11 h-auto hover:animate-bounce ease-in-out transition-transform" src="./src/images/icon/icons8-pornhub-50.png" alt="">
+                        <img class="w-11 h-auto hover:animate-bounce " src="./src/images/icon/icons8-porn-50.png" alt="">
+                        <img class="w-11 h-auto hover:animate-bounce" src="./src/images/icon/icons8-tinder-50.png" alt="">
+                        <img class="w-11 h-auto hover:animate-bounce" src="./src/images/icon/icons8-18-plus-48.png" alt="">
+                        <img class="w-11 h-auto hover:animate-bounce" src="./src/images/icon/icons8-reddit-50.png" alt="">
+                    </div>
+                </div>
+                <div class="mt-11">
+                    <h1 class="text-md md:text-xl border-b border-gray-300">Anonymous</h1>
+                    <p class="text-gray-700 mb-6 md:p-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati corrupti ducimus perspiciatis laborum nobis quisquam fugiat maiores, quas consequatur optio aperiam distinctio rerum soluta nam architecto tempore necessitatibus, quia non?</p>
+                </div>
+                <div class="mt-11">
+                    <h1 class="text-md md:text-xl border-b border-gray-300">The Pillars</h1>
+                    <img class="md:p-5" src="https://dummyimage.com/600x400/000/fff&text=image" alt="">
+                </div>
+                <div class="mt-11">
+                    <h1 class="text-md md:text-xl border-b border-gray-300">Tags</h1>
+                    <ul class="flex flex-wrap gap-2 place-content-center md:p-5">
+                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Wesson</li>
+                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Mikel</li>
+                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Ate.lizel</li>
+                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Jim</li>
+                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Josef</li>
+                    </ul>
+                </div>
+                <div class="mt-11 space-y-5">
+                    <h1 class="text-lg md:text-xl font-semibold text-gray-800 border-b border-gray-300">Data</h1>
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-4">
+                        <input 
+                            type="search"
+                            placeholder="Search for person..."
+                            class="px-4 py-2 w-full md:w-64 rounded-lg border border-gray-300 
+                                focus:ring-2 focus:ring-black focus:border-black 
+                                transition-all duration-300 shadow-sm
+                                placeholder-gray-400"
+                        >
+                        <button 
+                            class="w-32 text-xs md:text-sm font-semibold py-2 px-6
+                                bg-black text-white border border-black 
+                                transition-all duration-300 ease-out
+                                hover:bg-white hover:text-black hover:shadow-lg hover:shadow-black/10">
+                            Search
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+    <footer>
+        <div class="bg-gray-200 py-10 px-6 md:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-gray-700">
+
+                <!-- About -->
+                <div>
+                <h2 class="text-lg font-semibold mb-3">About</h2>
+                <p class="text-sm leading-relaxed">
+                    Nunc lorem et mauris mattis efficitur. In eu lacus erat, ut
+                    tristique fucis sapien. Sed fermentum arcu eu malesuada dignissim.
+                    Maecenas id ligula leo. Curabitur a justo nec. Class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra, per inceptos
+                    himenaeos. Nulla eleifend felis velit, feugiat et amet lacinia,
+                    per tristique himenaeos.
+                </p>
+                </div>
+
+                <!-- Latest Posts -->
+                <div>
+                <h2 class="text-lg font-semibold mb-3">Latest posts</h2>
+
+                <div class="flex gap-4 mb-4">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=image" class="w-20 h-14 object-cover rounded" />
+                    <div>
+                    <p class="text-sm font-medium">Post title</p>
+                    <p class="text-xs text-gray-500">28 March 2016</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=image" class="w-20 h-14 object-cover rounded" />
+                    <div>
+                    <p class="text-sm font-medium">Post title</p>
+                    <p class="text-xs text-gray-500">28 March 2016</p>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Latest Work -->
+                <div>
+                <h2 class="text-lg font-semibold mb-3">Latest work</h2>
+
+                <div class="flex gap-4 mb-4">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=image" class="w-20 h-14 object-cover rounded" />
+                    <div>
+                    <p class="text-sm font-medium">Post title</p>
+                    <p class="text-xs text-gray-500">28 March 2016</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-4">
+                    <img src="https://dummyimage.com/600x400/000/fff&text=image" class="w-20 h-14 object-cover rounded" />
+                    <div>
+                    <p class="text-sm font-medium">Post title</p>
+                    <p class="text-xs text-gray-500">28 March 2016</p>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-10 border-t border-gray-300 pt-4 flex justify-between text-sm text-gray-500">
+                <p>© 2014 Nelson. Created by Nelson</p>
+
+                <div class="flex gap-4">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-pinterest-p"></i>
+                </div>
+            </div>
+            </div>
+
+    </footer>
 </body>
 </html>
