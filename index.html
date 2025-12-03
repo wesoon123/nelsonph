@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Nelson</title>
     <link href="./src/css/index.css" rel="stylesheet" type="text/css">
     <script type="module" src="./src/js/index.js" defer></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        [x-cloak] { display: none !important; }
+    </style>
 </head>
 
 <body class="font-inter" x-data="dropdown">
@@ -21,18 +24,32 @@
     </nav>
 
     <!-- BUTTON -->
-    <button @click="toggle" class="cursor-pointer">
-        <img class="w-5 h-5 block md:hidden" src="./src/images/icon/icons8-menu-50.png" />
-    </button>
+    <button @click="toggle" class="cursor-pointer block md:hidden relative w-6 h-6">
+        
+        <!-- Hamburger -->
+        <img
+            x-show="!open"
+            x-transition.opacity.scale.75
+            class="absolute inset-0 w-6 h-6"
+            src="./src/images/icon/icons8-menu-50.png"
+        >
 
+        <!-- Close icon -->
+        <img
+            x-show="open"
+            x-transition.opacity.scale.75
+            class="absolute inset-0 w-6 h-6"
+            src="./src/images/icon/icons8-close-window-50.png"
+        >
+    </button>
     <!-- BACKDROP LAYER -->
-    <div 
+    <!-- <div 
         x-show="open"
         x-cloak
         @click.self="close()"
         x-transition.opacity
         class="block md:hidden fixed inset-0 bg-black/40 z-40">
-    </div>
+    </div> -->
 
     <!-- MENU PANEL (FIXED SO IT STAYS ON SCROLL) -->
     <div 
@@ -47,14 +64,14 @@
         class="block md:hidden fixed top-20 right-6 p-5 w-48 backdrop-blur-lg bg-white/30 
                border border-white/20 shadow-xl rounded-2xl z-50"
     >
-        <ul class="flex flex-col gap-2">
-            <li class="rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2">Home</li>
-            <li class="rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2">Joshua</li>
-            <li class="rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2">Josef</li>
-            <li class="rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2">Marnhel</li>
-            <li class="rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2">Div</li>
-            <li class="rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2">Mikel</li>
-            <li class="rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2">Papa Mac</li>
+        <ul class="flex flex-col gap-2 nav-items">
+            <li class="">Home</li>
+            <li class="">Joshua</li>
+            <li class="">Josef</li>
+            <li class="">Marnhel</li>
+            <li class="">Div</li>
+            <li class="">Mikel</li>
+            <li class="">Papa Mac</li>
         </ul>
     </div>
      
@@ -116,30 +133,31 @@
     <main class="container max-w-[900px] mx-auto p-4">
         <!-- FEATURE -->
         <div class="grid grid-cols-2 gap-2 mt-10 md:grid-cols-3">
-            <div><img class="widge relative" src="https://dummyimage.com/600x400/000/fff&text=image" class="w-full h-auto"></div>
-            <div><img src="https://dummyimage.com/600x400/000/fff&text=image" class="w-full h-auto widget"></div>
-            <div class="col-span-2 md:col-span-1 widget"><img src="https://dummyimage.com/600x400/000/fff&text=image" class="w-full h-auto"></div>
+            <div><img class="w-full h-auto relative" src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744464/513982592_24061508523458111_9184795789759467661_n_xwpzy8.jpg" class="w-auto h-full object-cover"></div>
+            <div><img src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744463/465974904_9391712167523041_4801001521291412816_n_vkejip.jpg" class="w-auto h-full object-cover"></div>
+            <div class="col-span-2 md:col-span-1 widget"><img src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744462/506648183_10006146206137034_2068405716654280347_n_rxx0vc.jpg" class="w-auto h-full object-cover"></div>
         </div>
         <div class="
   grid grid-cols-1 md:
   md:grid-cols-[550px_minmax(250px,1fr)] gap-9 mt-11">
             <!-- MAIN -->
             <div>
+                <div class="block md:hidden"><h1 class="text-xl mb-5 md:text-2xl border-b font-bold border-gray-300">The Archive</h1></div>
                 <div class="grid gap-2 md:w-xl">
-                    <img src="https://dummyimage.com/600x400/000/fff&text=image" alt="feature image">
+                    <img src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744464/503854913_9616789818446519_5994236682567217974_n_qxhj1k.jpg" alt="feature image">
                         <div class="flex gap-1 flex-col">
-                            <h3>The first year</h3>
+                            <h3 class="text-md md:text-xl font-bold">The first year</h3>
                             <p>July 13, 2013</p>
-                            <p class="text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel aut illum sunt, inventore itaque enim fugit dignissimos laudantium! Voluptatibus laboriosam vel omnis reiciendis natus quam, magnam eum id quidem sapiente.</p>
+                            <p class="text-justify">On their very first day of school, they stumbled upon a lively group of friends. Little did they know, this meeting would spark countless adventures and create memories that would last a lifetime.</p>
                             <button class="w-32 text-[12px] md:text-sm cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300 border border-black self-start">Read More</button>
                         </div>
                 </div>
                 <div class="grid gap-5 mt-11 bg-white custom-shadow overflow-hidden md:w-xl">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <!-- Image Column - Adjusted to take less space -->
-                        <div class="md:col-span-1 flex justify-center">
-                            <img class="w-full max-w-xs md:max-w-full  object-cover" 
-                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                        <div class="flex md:col-span-1 md:row-span-1 justify-center">
+                            <img class="w-full max-w-xs md:h-50  object-cover"  
+                                src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764747629/Image_fx_d8k5u8.jpg" 
                                 alt="Wheelband Match">
                         </div>
                         
@@ -147,9 +165,7 @@
                         <div class="md:col-span-2 flex flex-col justify-center">
                             <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Gary vs Dandrib</h2>
                             <p class="text-gray-600 mb-4">August 23, 2014</p>
-                            <p class="text-gray-700 mb-6">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut deleniti corrupti expedita praesentium, ipsa vitae sequi aut facere pariatur et nulla iusto asperiores a quo modi fuga quas nisi consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut deleniti corrupti expedita praesentium.
-                            </p>
+                            <p class="text-gray-700 mb-6">After their final fight, the two turned their backs on each other, carrying unspoken words and heavy hearts. They never talked again, and the distance between them grew like a wound that never healed.</p>
                             <button class="w-32 text-[12px] md:text-sm cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300 border border-black self-start">
                                 Read More
                             </button>
@@ -157,14 +173,14 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="md:col-span-1 flex justify-center">
-                            <img class="w-full max-w-xs md:max-w-full  object-cover" 
-                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                            <img class="w-full max-w-xs md:h-50  object-cover" 
+                                src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744465/505995819_23916065014669130_6981937774176163241_n_ni2f4v.jpg" 
                                 alt="Wheelband Match">
                         </div>
                         <div class="md:col-span-2 flex flex-col justify-center">
                             <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Nelson vs Gad</h2>
                             <p class="text-gray-600 mb-4">April 21, 2015</p>
-                            <p class="text-gray-700 mb-6">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi veniam voluptatum commodi nesciunt nisi eveniet iure, deleniti ipsam doloribus assumenda dolore debitis sequi neque mollitia? Harum similique explicabo ipsa dolorum.</p>
+                            <p class="text-gray-700 mb-6">After their argument, two friends reconcile and enjoy eating barbecue together, capturing the moment with a happy photo.</p>
                             <button class="w-32 text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300">
                                 Read More
                             </button>
@@ -172,14 +188,14 @@
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="md:col-span-1 flex justify-center">
-                            <img class="w-full max-w-xs md:max-w-full  object-cover" 
-                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                            <img class="w-full max-w-xs md:h-50  object-cover" 
+                                src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744466/465058607_8975675632443870_769590357803153208_n_a5omeg.jpg" 
                                 alt="Wheelband Match">
                         </div>
                         <div class="md:col-span-2 flex flex-col justify-center">
                             <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Kuya mikel and Gurls</h2>
                             <p class="text-gray-600 mb-4">December 12, 2014</p>
-                            <p class="text-gray-700 mb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores facilis obcaecati dignissimos aperiam provident cum numquam repellat quis necessitatibus fugit! Aliquam dicta fugit atque hic aspernatur voluptatem, aperiam laboriosam libero?</p>
+                            <p class="text-gray-700 mb-6">A group of friends confronted their male friend in frustration because he ignored the broken umbrella, and now the rain soaked all of them. What started as a small problem turned into a wave of irritation.</p>
                             <button class="w-32 text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold py-2 px-6 transition duration-300">
                                 Read More
                             </button>
@@ -194,28 +210,28 @@
                     <div class="grid grid-cols-1 gap-5 p-5">
                         <div class="grid grid-cols-2 gap-5">
                             <div><img class="w-full max-w-xs md:max-w-full  object-cover" 
-                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764749403/room_cpbmds.jpg" 
                                 alt="Wheelband Match"></div>
                             <div>
-                                <h2 class="text-md md:text-xl  text-gray-600 mb-2">Mang Himang Room Scandal</h2>
+                                <h2 class="text-md md:text-sm  text-gray-600 mb-2">Mang Himang Room Scandal</h2>
                                  <p class="text-gray-600 mb-4">April 21, 2015</p>
                             </div>
                         </div>
                         <div class="grid grid-cols-2 gap-5">
                             <div><img class="w-full max-w-xs md:max-w-full  object-cover" 
-                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764749545/cavs_bvdysk.jpg" 
                                 alt="Wheelband Match"></div>
                             <div>
-                                <h2 class="text-md md:text-xl  text-gray-600 mb-2">Missing Calvin</h2>
+                                <h2 class="text-md md:text-sm  text-gray-600 mb-2">Missing Calvin</h2>
                                  <p class="text-gray-600 mb-4">April 21, 2015</p>
                             </div>
                         </div>
                         <div class="grid grid-cols-2 gap-5">
                             <div><img class="w-full max-w-xs md:max-w-full  object-cover" 
-                                src="https://dummyimage.com/600x400/000/fff&text=image" 
+                                src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744465/505123762_23916754297933535_4667582375509867067_n_pd2j50.jpg" 
                                 alt="Wheelband Match"></div>
                             <div>
-                                <h2 class="text-md md:text-xl  text-gray-600 mb-2">Ate. Lezil</h2>
+                                <h2 class="text-md md:text-sm  text-gray-600 mb-2">Ate. Lezil</h2>
                                  <p class="text-gray-600 mb-4">April 21, 2015</p>
                             </div>
                         </div>
@@ -302,20 +318,20 @@
                 </div>
                 <div class="mt-11">
                     <h1 class="text-md md:text-xl border-b border-gray-300">Anonymous</h1>
-                    <p class="text-gray-700 mb-6 md:p-5">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati corrupti ducimus perspiciatis laborum nobis quisquam fugiat maiores, quas consequatur optio aperiam distinctio rerum soluta nam architecto tempore necessitatibus, quia non?</p>
+                    <p class="text-gray-700 mb-6 md:p-5">In P.E. class, a guy asked to borrow another guy’s jogging pants just to mark attendance, but the owner refused to lend them. Things got so heated that the frustrated borrower jokingly challenged him to a fistfight over the pants he never got!</p>
                 </div>
                 <div class="mt-11">
                     <h1 class="text-md md:text-xl border-b border-gray-300">The Pillars</h1>
-                    <img class="md:p-5" src="https://dummyimage.com/600x400/000/fff&text=image" alt="">
+                    <img class="md:p-5" src="https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744463/507728984_23957358573873107_3869575783184109987_n_hngydo.jpg" alt="">
                 </div>
-                <div class="mt-11">
+                <div class="mt-11 tags">
                     <h1 class="text-md md:text-xl border-b border-gray-300">Tags</h1>
                     <ul class="flex flex-wrap gap-2 place-content-center md:p-5">
-                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Wesson</li>
-                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Mikel</li>
-                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Ate.lizel</li>
-                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Jim</li>
-                        <li class="p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300">Josef</li>
+                        <li class="">Wesson</li>
+                        <li class="">Mikel</li>
+                        <li class="">Ate.lizel</li>
+                        <li class="">Jim</li>
+                        <li class="">Josef</li>
                     </ul>
                 </div>
                 <div class="mt-11 space-y-5">
@@ -349,12 +365,7 @@
                 <div>
                 <h2 class="text-lg font-semibold mb-3">About</h2>
                 <p class="text-sm leading-relaxed">
-                    Nunc lorem et mauris mattis efficitur. In eu lacus erat, ut
-                    tristique fucis sapien. Sed fermentum arcu eu malesuada dignissim.
-                    Maecenas id ligula leo. Curabitur a justo nec. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos
-                    himenaeos. Nulla eleifend felis velit, feugiat et amet lacinia,
-                    per tristique himenaeos.
+                    Welcome to our community: no room for serious people here. Only those who can laugh at the dark, messy, and hilarious memories of BSICT 1-1 life are allowed. Failed exams, PE disasters, group project chaos, and all the cringe-worthy moments—this is where they become comedy gold. Leave your seriousness at the door and embrace the laughs!
                 </p>
                 </div>
 
@@ -413,7 +424,6 @@
                 </div>
             </div>
             </div>
-
     </footer>
 </body>
 <script>

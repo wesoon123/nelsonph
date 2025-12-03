@@ -3,6 +3,7 @@ import Alpine from 'alpinejs'
 document.addEventListener('alpine:init', () => {
     Alpine.data('dropdown', () => ({
         open: false,
+        catUrl:'' ,
 
         toggle() {
             this.open = !this.open;
@@ -18,7 +19,18 @@ document.addEventListener('alpine:init', () => {
             document.addEventListener('keydown', (e) => {
                 if (e.key === 'Escape') this.close();
             });
-        }
+        },
+
+        //  async coffeAPi() {
+        //     try {
+        //         const response = await fetch('https://api.thecatapi.com/v1/images/search');
+        //         const data = await response.json();
+        //         this.catUrl = data[0].url; // update reactive variable
+        //         console.log(data);
+        //     } catch (error) {
+        //         this.catUrl = "Error loading cat 😿";
+        //     }
+        // }
     }))
 })
 

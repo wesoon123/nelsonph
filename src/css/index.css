@@ -1,18 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
 
-@theme {
+@layer components {
+    .nav-items li {
+        @apply rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2
+    }
+    .tags ul li {
+    @apply p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300
+}
+}
+
+@theme  {
     --font-inter:"Inter", sans-serif;
 
 }
 
-@font-face {
-   
-}
 
 .hero-bg {
     background-image: url("https://res.cloudinary.com/dbhhps3yb/image/upload/v1763968024/img01_k0iqbm.jpg");
     background-size: cover;
     background-position: center;
 }
+
+nav > h1 {
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
