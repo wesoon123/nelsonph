@@ -7,9 +7,10 @@
     .nav-items li {
         @apply rounded-2xl bg-white/10 backdrop-blur-lg hover:scale-105 hover:bg-white/20 transition duration-300 p-2
     }
+
     .tags ul li {
     @apply p-2 w-auto text-[12px] md:text-sm  cursor-pointer bg-black text-white hover:text-black hover:bg-white font-bold transition duration-300
-}
+    }
 }
 
 @theme  {
@@ -19,7 +20,7 @@
 
 
 .hero-bg {
-    background-image: url("https://res.cloudinary.com/dbhhps3yb/image/upload/v1763968024/img01_k0iqbm.jpg");
+    background-image: url("https://res.cloudinary.com/dbhhps3yb/image/upload/v1764744463/508383709_10003224676456714_6952655648683213600_n_fih2ci.jpg");
     background-size: cover;
     background-position: center;
 }
